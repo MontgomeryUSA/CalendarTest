@@ -28,7 +28,7 @@ public class gamePanelList extends JPanel {
 
     private void importImg() {
         try {
-            img = ImageIO.read(new File("C:/Users/julia/IdeaProjects/Calendar/res/BackGroundList.png"));
+            img = ImageIO.read(new File("H:/CS/Calendar/res/BackGroundList.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -93,7 +93,7 @@ public class gamePanelList extends JPanel {
                 if (string.contains("Add"))
                 {
                     System.out.println("add");
-                    new AddButton(fileName);
+                    new AddButton(fileName,"todo");
                     todoFrame.dispose();
                 }
                 if (string.contains("Edit"))
@@ -115,10 +115,50 @@ public class gamePanelList extends JPanel {
 public void ListScreen(String[] events) {
     // Create a new JFrame for the To-Do list
     todoFrame = new JFrame("To-Do List");
-    todoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    todoFrame.setSize(this.getPreferredSize());
-    todoFrame.setLayout(new BorderLayout());
+    todoFrame.addWindowListener(new WindowListener() {
+                                    @Override
+                                    public void windowOpened(WindowEvent e) {
 
+                                    }
+
+                                    @Override
+                                    public void windowClosing(WindowEvent e) {
+                                    todoFrame.dispose();
+                                        try {
+                                            new game(fileName,"test1");
+                                        } catch (IOException ex) {
+                                            throw new RuntimeException(ex);
+                                        }
+                                    }
+
+                                    @Override
+                                    public void windowClosed(WindowEvent e) {
+
+                                    }
+
+                                    @Override
+                                    public void windowIconified(WindowEvent e) {
+
+                                    }
+
+                                    @Override
+                                    public void windowDeiconified(WindowEvent e) {
+
+                                    }
+
+                                    @Override
+                                    public void windowActivated(WindowEvent e) {
+
+                                    }
+
+                                    @Override
+                                    public void windowDeactivated(WindowEvent e) {
+
+                                    }
+                                });
+
+    todoFrame.setLayout(new BorderLayout());
+    todoFrame.setSize(this.getPreferredSize());
     // Create a panel for the top image (1/6th of the frame height)
     JPanel topImagePanel = new JPanel() {
         @Override

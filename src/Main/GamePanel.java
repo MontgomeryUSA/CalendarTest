@@ -1,6 +1,7 @@
 package Main;
 
 import CalendarFunctions.AddButton;
+import CalendarFunctions.calendarMainPage;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -33,7 +34,7 @@ public class GamePanel extends JPanel {
 
     private void importImg() {
         try {
-            img = ImageIO.read(new File("C:/Users/julia/IdeaProjects/Calendar/res/Background.png"));
+            img = ImageIO.read(new File("H:/CS/Calendar/res/Background.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,9 +71,6 @@ public class GamePanel extends JPanel {
 
         g.drawImage(img, x, y, newWidth, newHeight, null);
 
-
-        g.drawRect(160, 298, 380, 200);
-
     }
 
     public void createLabel(String strLabel, int width, int height) {
@@ -105,7 +103,16 @@ public class GamePanel extends JPanel {
                     }
                 }
                 if(string.substring(5).contains("Calendar")){
-                    //Calendar Screen
+                    try {
+                        new calendarMainPage(fileName);
+                        jFrame.dispose();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                if(string.substring(5).contains("Timer")){
+                    new Countdown(fileName);
+                    jFrame.dispose();
                 }
             }
         });
@@ -162,6 +169,13 @@ public class GamePanel extends JPanel {
         adButton("Open Calendar", 380, 50, secondButtonPanel, events);
         buttonPanel.add(secondButtonPanel); // Add second button panel to button panel
 
+        JPanel thirdButtonPanel = new JPanel();
+        thirdButtonPanel.setLayout(new BoxLayout(thirdButtonPanel, BoxLayout.Y_AXIS)); // Vertical for label and button
+        thirdButtonPanel.setBackground(Color.WHITE); // Set background color to white
+        thirdButtonPanel.add(Box.createRigidArea(new Dimension(0, 150)));
+
+        adButton("Open Timer", 380, 50, thirdButtonPanel, events);
+        buttonPanel.add(thirdButtonPanel);
         // Add button panel to the main panel (this) using GridBagConstraints
         gbc.gridx = 0;  // Set column position
         gbc.gridy = 0;  // Set row position

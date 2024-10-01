@@ -171,7 +171,6 @@ public class game {
         int i = 0;
         while (events[i] != null){
             System.out.println(events[i]);
-            System.out.println("test");
             i++;
         }
     }

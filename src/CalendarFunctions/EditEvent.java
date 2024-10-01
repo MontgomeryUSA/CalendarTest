@@ -40,8 +40,10 @@ public class EditEvent {
     JComboBox timeBoxEndM = new JComboBox(minutes);
     JDatePickerImpl datePicker;
     int index= 0;
+    String state;
     public EditEvent(String s, String p) throws IOException {
         textFile = s;
+        state = p;
         if(p!=null){
             setImportedEvents();
             loadEventDetails(p);
@@ -396,10 +398,12 @@ public class EditEvent {
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-                try {
-                    new game(textFile,"todo");
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
+                if (state==null){
+                    try {
+                        new game(textFile,"todo");
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 }
                 frame.dispose();
             }

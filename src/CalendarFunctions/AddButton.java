@@ -36,12 +36,13 @@ public class AddButton {
     JComboBox timeBoxStartM = new JComboBox(minutes);
     JDatePickerImpl datePicker;
     JFrame editFrame;
-
+    String screen;
     //creates dropdowns for the end time
     JComboBox timeBoxEndH = new JComboBox(hours);
     JComboBox timeBoxEndM = new JComboBox(minutes);
-    public AddButton(String p){
+    public AddButton(String p, String state){
         docName = p;
+        screen = state;
         setStartThing();
         openEditWindow();
         System.out.println(docName);
@@ -120,10 +121,12 @@ public class AddButton {
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
-                    try {
-                        new game(docName,"todo");
-                    } catch (IOException ex) {
-                        throw new RuntimeException(ex);
+                    if(screen.equalsIgnoreCase("todo")){
+                        try {
+                            new game(docName,"todo");
+                        } catch (IOException ex) {
+                            throw new RuntimeException(ex);
+                        }
                     }
                     try {
                         new Sorter(docName);

@@ -1,0 +1,25 @@
+20240926, Date Night with Batman, start: #03:00# End: @12:00@
+20241010, Time for bed, start: #02:00# End: @14:00@
+20241012, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20241013, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20241017, Oregano Cricket Game, start: #03:00# End: @14:00@
+20241018, LOCK IN TODAYS THE DAY, start: #03:00# End: @08:00@
+20241029, Visit Grandpa jpoe, start: #02:00# End: @15:00@
+20241107, Darian Birthday, start: #03:00# End: @09:00@
+20241124, F11 key, start: #03:00# End: @09:00@
+20241127, F12 key, start: #03:00# End: @09:00@
+20250201, TESTER1, start: #02:00# End: @11:00@
+20250228, TESTER, start: #03:00# End: @12:00@
+20250308, Play Brawl Stars with the gang, start: #09:00# End: @14:00@
+20250329, MCBRAYER BIRTHDAY , start: #02:00# End: @14:00@
+20250604, Zain Birthday, start: #03:00# End: @09:00@
+20250712, CS PRESE, start: #03:00# End: @22:00@
+20250806, Vitor Birthday, start: #03:00# End: @09:00@
+20250901,  Pavan Birthday, start: #03:00# End: @03:00@
+20250903,  Julian Birthday, start: #03:00# End: @03:00@
+20251012, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20251013, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20261012, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20261013, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20271012, VERY IMPORTANT THING, start: #03:00# End: @09:00@
+20271013, VERY IMPORTANT THING, start: #03:00# End: @09:00@
